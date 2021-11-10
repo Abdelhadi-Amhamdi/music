@@ -1,0 +1,167 @@
+/* menu */
+
+.menu {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.main {
+  height: 97vh;
+  margin: 10px;
+}
+.heading {
+  margin: 5px;
+  height: 100px;
+  border-radius: 10px;
+  text-align: center;
+  background-image: url("./c-d-x-PDX_a_82obo-unsplash.jpg");
+  background-size: cover;
+  box-shadow: #00000087 1px 2px 2px;
+}
+.heading h1 {
+  width: 59px;
+  font-size: 1.5rem;
+  margin: 0px 20px;
+  font-family: fantasy;
+  line-height: 2;
+  letter-spacing: 1.5px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.row.sections {
+  margin: 5px 0px;
+  margin-top: 50px;
+  height: 100%;
+}
+.music-player {
+  background: white;
+  width: 100%;
+  height: 64%;
+  border-radius: 10px;
+  box-shadow: #00000087 1px 2px 2px;
+  padding: 10px;
+}
+.disk {
+  position: relative;
+  display: block;
+  margin: 22px auto;
+  width: 125px;
+  top: 34px;
+  height: 125px;
+  border-radius: 50%;
+  background-image: url("./c-d-x-PDX_a_82obo-unsplash.jpg");
+  background-size: cover;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+}
+.disk::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #5f7a61;
+}
+.song-slider {
+  width: 100%;
+  position: relative;
+  top: 65px;
+}
+
+.seek-bar {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: #7fc8a9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1px;
+  height: 20px;
+  box-shadow: -400px 0 0 400px #d5eebb;
+}
+.current-time,
+.song-duration {
+  font-size: 14px;
+}
+
+.song-duration {
+  position: absolute;
+  right: 0;
+}
+.info {
+  text-align: center;
+  width: 100%;
+  top: 16px;
+  position: relative;
+}
+
+.menu-body.hide {
+  animation: spin 0.5s linear;
+  transform-origin: right bottom;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+.menu-body.show {
+  animation: spinshow 0.5s linear;
+  transform-origin: right;
+  transition: opacity 1s ease;
+  opacity: 1;
+  pointer-events: all;
+}
+.hide-btn {
+  display: none !important;
+}
+
+.btn.show-btn,
+.close-btn {
+  width: 70px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 70px;
+  z-index: 100;
+  background: #fdd024;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes spinshow {
+  from {
+    transform: rotateZ(-180deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0;
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
