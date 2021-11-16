@@ -11,21 +11,21 @@ const songs = [
   {
     id: 0,
     name: "song-one",
-    src: "https://www.bensound.com/bensound-music/bensound-memories.mp3",
+    src: "./sounds/a_6.mp3",
     artist: "bensound-music",
     title:'memories'
   },
   {
     id: 1,
     name: "song-tow",
-    src: "https://www.bensound.com/bensound-music/bensound-romantic.mp3",
+    src: "./sounds/a_6.mp3",
     artist:'bensound-music',
     title:'romantic'
   },
   {
     id: 2,
     name: "song-three",
-    src: "https://www.bensound.com/bensound-music/bensound-love.mp3",
+    src: "./sounds/a_6.mp3",
     artist:'bensound-music',
     title:"love"
   },
